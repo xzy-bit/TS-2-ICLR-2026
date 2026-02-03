@@ -12,9 +12,8 @@ TEST_TOKENIZED_FILE="./data/ultrafeedback_sft_test_llama3.1_tokenized.jsonl"
 
 MODEL_NAME_OR_PATH="meta-llama/Llama-3.1-8B"
 SEED=1234
-
+METHOD='ts2'
 TIME_STEP=`date "+%Y-%m-%d-%H-%M-%S"`
-METHOD="gem"
 OUTPUT_DIR="./log/sft_${METHOD}-llama3.1-8b-ultrafeedback-$TIME_STEP-$SEED"
 
 mkdir -p $OUTPUT_DIR
@@ -30,9 +29,9 @@ deepspeed train.py \
     --gradient_accumulation_steps 4 \
     --evaluation_strategy "epoch" \
     --save_strategy "no" \
-    --loss $METHOD \
-    --gem_beta 0.7 \
-    --gem_h "logsigmoid" \
+    --loss "ts2" \
+    --ts2_alpha 0.25 \
+    --ts2_temperature 1.0 \
     --learning_rate 2e-5 \
     --lr_scheduler_type cosine \
     --warmup_ratio 0.03 \
