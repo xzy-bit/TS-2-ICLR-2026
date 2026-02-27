@@ -5,24 +5,31 @@ set -x
 
 export HF_DATASETS_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
-export CUDA_VISIBLE_DEVICES=0
+export CUDA_VISIBLE_DEVICES=2
 
 DATA_PATH="tatsu-lab/alpaca_eval"
-MODEL_NAME="sft_ts2_llama-3.1-8b"
-MODEL_PATH="./log/sft_ts2-llama-3.1_8b-ultrafeedback-2025-08-23-15-49-31-1234"
+MODEL_NAME="sft_ts2_llama31-8b"
+
+# Test script
+MODEL_PATH="meta-llama/Llama-3.1-8B-Instruct"
+
+#MODEL_PATH="./log/sft_ts2-llama-3.1_8b-ultrafeedback-2025-08-23-15-49-31-1234"
 TOKENIZER_PATH="meta-llama/Llama-3.1-8B-Instruct"
 REWARD_MODEL="sfairXC/FsfairX-LLaMA3-RM-v0.1"
 
-RESPONSE_PATH="./alpaca_results/response"
-SAVED_PATH="./alpaca_results/winrate"
+RESPONSE_PATH="alpacal_eval/response"
+SAVED_PATH="alpacal_eval/winrate"
 
-mkdir -p $RESPONSE_PATH,$SAVED_PATH
+mkdir -p alpacal_eval
+mkdir -p alpacal_eval/response
+mkdir -p alpacal_eval/results
 
 SEED=42
 T=0.6
 K=50
 P=0.9
 N=32
+
 
 python  evaluation/generate_response.py \
     --model_name_or_path $MODEL_PATH \

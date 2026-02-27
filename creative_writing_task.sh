@@ -5,13 +5,20 @@ set -x
 
 export HF_DATASETS_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
-export CUDA_VISIBLE_DEVICES=0
+export CUDA_VISIBLE_DEVICES=1
 
-MODEL_PATH="./log/sft_ts2-llama-3.1_8b-ultrafeedback-2025-08-29-17-36-44-1234"
+#MODEL_PATH="./log/sft_ts2-llama-3.1_8b-ultrafeedback-2025-08-29-17-36-44-1234"
+
+MODEL_PATH="meta-llama/Llama-3.1-8B-Instruct"
 TOKENIZER_PATH="meta-llama/Llama-3.1-8B-Instruct"
 MODEL_NAME="sft_ts2_llama-3.1-8b"
-RESPONSE_PATH="./log/creative_writing/response"
-SAVED_PATH="./log/creative_writing/results"
+RESPONSE_PATH="creative_writing/response"
+SAVED_PATH="creative_writing/results"
+
+mkdir -p creative_writing
+mkdir -p creative_writing/response
+mkdir -p creative_writing/results
+
 SEED=42
 N=16
 T=1.0
@@ -23,7 +30,7 @@ P=0.9
 # poem writing
 ############################################
 
-DATA_PATH="./data/poem_generation"
+DATA_PATH="./data/creative_writing/poem_generation"
 
 python evaluation/generate_response.py \
     --model_name_or_path $MODEL_PATH \
@@ -52,7 +59,7 @@ python evaluation/evaluation_diversity.py \
 # story writing
 ############################################
 
-DATA_PATH="./data/story_generation"
+DATA_PATH="./data/creative_writing/story_generation"
 
 python evaluation/generate_response.py \
     --model_name_or_path $MODEL_PATH \

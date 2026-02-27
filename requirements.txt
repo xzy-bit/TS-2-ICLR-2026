@@ -1,13 +1,12 @@
 numpy==1.26.4
-torch==2.5.1
 transformers==4.52.4
 sentence-transformers==4.1.0
 datasets==3.6.0
 deepspeed==0.17.1
-flash-attn @ https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.1.post4/flash_attn-2.7.1.post4+cu12torch2.5cxx11abiFALSE-cp310-cp310-linux_x86_64.whl#sha256=ac7096c73cf5381e1e067abc58edcc510a882e8a58d4cb34cfe87801ecf1c817
 accelerate==1.8.1
-vllm==0.7.1
 evalplus @ git+https://github.com/evalplus/evalplus@dac1da40276aff8c965bdf351952aaf6bfeb3cc9
 nltk==3.9.1
 fraction==2.2.0
 sacrebleu==2.5.1
+entmax
+tensorboardX

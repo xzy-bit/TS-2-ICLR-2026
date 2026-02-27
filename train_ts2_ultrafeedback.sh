@@ -7,8 +7,8 @@ export HF_DATASETS_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
 export FLASH_ATTENTION_DETERMINISTIC="1"
 
-TRAIN_TOKENIZED_FILE="./data/ultrafeedback_sft_train_llama3.1_tokenized.jsonl"
-TEST_TOKENIZED_FILE="./data/ultrafeedback_sft_test_llama3.1_tokenized.jsonl"
+TRAIN_TOKENIZED_FILE="data/ultrafeedback_sft_train_llama31_8b_tokenized.jsonl"
+TEST_TOKENIZED_FILE="data/ultrafeedback_sft_test_llama31_8b_tokenized.jsonl"
 
 MODEL_NAME_OR_PATH="meta-llama/Llama-3.1-8B"
 SEED=1234
@@ -27,7 +27,7 @@ deepspeed train.py \
     --output_dir $OUTPUT_DIR \
     --per_device_train_batch_size 4 \
     --gradient_accumulation_steps 4 \
-    --evaluation_strategy "epoch" \
+    --eval_strategy "epoch" \
     --save_strategy "no" \
     --loss "ts2" \
     --ts2_alpha 0.25 \

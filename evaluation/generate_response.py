@@ -345,7 +345,7 @@ def main():
             )
             with torch.no_grad():
                 output_results = model.generate(
-                    prompt_token_ids=prompt_token_ids, sampling_params=sampling_params
+                    prompt_token_ids, sampling_params=sampling_params
                 )
             ans_str = []
             logprobs = []

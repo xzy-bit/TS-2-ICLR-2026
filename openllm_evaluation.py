@@ -316,7 +316,7 @@ def main():
         )
 
         with torch.no_grad():
-            outputs = llm.generate(prompt_token_ids=prompt_token_ids,
+            outputs = llm.generate(prompt_token_ids,
                                    sampling_params=sampling)
 
         for j, out in enumerate(outputs):

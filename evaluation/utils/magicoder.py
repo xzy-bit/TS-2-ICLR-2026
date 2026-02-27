@@ -323,7 +323,7 @@ class ModelContext:
             ]
 
             output_results = self.model.generate(
-                prompt_token_ids=prompt_token_ids, sampling_params=sampling_params
+                prompt_token_ids, sampling_params=sampling_params
             )
             outputs = []
             for j in range(len(output_results)):

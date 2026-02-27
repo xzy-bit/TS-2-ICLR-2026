@@ -122,7 +122,7 @@ class SFTTrainer(Trainer):
             raise ValueError("All logits for some samples are -inf or extremely small, which breaks sparsemax.")
 
         # 调试输出 support size 计算前的 logits
-        print("sparsemax logits max:", max_logits.max().item(), "min:", max_logits.min().item())
+        #print("sparsemax logits max:", max_logits.max().item(), "min:", max_logits.min().item())
 
         with torch.no_grad():
             logits_on_labels = torch.gather(
