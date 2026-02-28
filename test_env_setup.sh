@@ -115,6 +115,7 @@ echo "Installing requirements (no torch/vllm in this file)..."
 pip install -r "${REQ_FILE}"
 
 pip install vllm
+
 echo ""
 echo "Quick import checks..."
 python - <<'PY'

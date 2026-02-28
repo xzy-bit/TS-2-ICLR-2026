@@ -11,9 +11,9 @@ DATA_PATH="tatsu-lab/alpaca_eval"
 MODEL_NAME="sft_ts2_llama31-8b"
 
 # Test script
-MODEL_PATH="meta-llama/Llama-3.1-8B-Instruct"
+#MODEL_PATH="meta-llama/Llama-3.1-8B-Instruct"
 
-#MODEL_PATH="./log/sft_ts2-llama-3.1_8b-ultrafeedback-2025-08-23-15-49-31-1234"
+MODEL_PATH="./log/sft_ts2-llama3.1-8b-ultrafeedback-2026-02-27-23-31-31-1234"
 TOKENIZER_PATH="meta-llama/Llama-3.1-8B-Instruct"
 REWARD_MODEL="sfairXC/FsfairX-LLaMA3-RM-v0.1"
 
@@ -47,7 +47,7 @@ python  evaluation/generate_response.py \
 
 python evaluation/evaluation_reward.py \
     --model_name_or_path $REWARD_MODEL \
-    --batch_size 4 \
+    --batch_size 1 \
     --detokenizer_path $TOKENIZER_PATH \
     --data_path "${RESPONSE_PATH}/${MODEL_NAME}_alpaca_eval-seed_${SEED}-n_${N}-T_${T}-K_${K}-P_${P}.json" \
     --save_path "${RESPONSE_PATH}/${MODEL_NAME}_alpaca_eval-seed_${SEED}-n_${N}-T_${T}-K_${K}-P_${P}-reward.json"  \

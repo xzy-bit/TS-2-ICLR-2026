@@ -5,17 +5,16 @@ set -x
 
 export HF_DATASETS_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
-export CUDA_VISIBLE_DEVICES="0"
+export CUDA_VISIBLE_DEVICES=0
 
 MODEL_KEY="bigcode/starcoder"
-MODEL_NAME="sft_ts2-llama-3.1_8b"
-#MODEL_PATH="./log/sft_ts2-llama-3.1_8b-ultrafeedback-2025-08-23-15-49-31-1234"
+MODEL_NAME="base"
+#MODEL_NAME="sft_ts2-llama-3.1_8b"
+#MODEL_PATH="./log/sft_ts2-llama3.1-8b-ultrafeedback-2026-02-27-23-31-31-1234"
 
 # Testing evaluation
-
 MODEL_PATH="meta-llama/Llama-3.1-8B-Instruct"
 TOKENIZER_PATH="meta-llama/Llama-3.1-8B-Instruct"
-METHOD_NAME="ts2"
 
 DATASET="humaneval"
 RESPONSE_PATH="humaneval_results/response/${MODEL_NAME}_evalplus-$DATASET.jsonl"

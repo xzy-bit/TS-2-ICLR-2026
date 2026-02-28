@@ -5,8 +5,8 @@ set -x
 
 export CUDA_VISIBLE_DEVICES=3
 
-#MODEL_PATH="./log/sft_ts2_llama-3.1_8b-ultrafeedback-2025-09-13-13-42-06-1234"
-MODEL_PATH="meta-llama/Llama-3.1-8B-Instruct"
+MODEL_PATH="./log/sft_ts2-llama3.1-8b-ultrafeedback-2026-02-27-23-31-31-1234"
+#MODEL_PATH="meta-llama/Llama-3.1-8B-Instruct"
 MODEL_NAME="sft_ts2"
 TOKENIZER_PATH="meta-llama/Llama-3.1-8B-Instruct"
 

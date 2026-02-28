@@ -7,11 +7,13 @@ export HF_DATASETS_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
 export CUDA_VISIBLE_DEVICES=1
 
-#MODEL_PATH="./log/sft_ts2-llama-3.1_8b-ultrafeedback-2025-08-29-17-36-44-1234"
+#MODEL_PATH="./log/sft_ts2-llama3.1-8b-ultrafeedback-2026-02-27-23-31-31-1234"
 
 MODEL_PATH="meta-llama/Llama-3.1-8B-Instruct"
 TOKENIZER_PATH="meta-llama/Llama-3.1-8B-Instruct"
-MODEL_NAME="sft_ts2_llama-3.1-8b"
+
+MODEL_NAME="base"
+#MODEL_NAME="sft_ts2_llama-3.1-8b"
 RESPONSE_PATH="creative_writing/response"
 SAVED_PATH="creative_writing/results"
 

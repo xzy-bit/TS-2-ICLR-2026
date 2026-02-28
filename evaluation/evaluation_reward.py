@@ -100,7 +100,7 @@ def calculate_winrate(data):
         best_n[i][5] = max(rewards[:32])>0
     length = len(best_n)
     best_n = best_n.sum(axis=0)*100/length
-    print("Winrate of n:")
+    print("Execllent rate of n:")
     for item in np.round(best_n,2):
         print(item,end='\t')
     print('\n')
@@ -117,7 +117,7 @@ def main():
     device = torch.device("cuda")
 
     model_class = AutoModelForSequenceClassification
-    flash_attn = True
+    flash_attn = False
     model = model_class.from_pretrained(
         args.model_name_or_path,
         torch_dtype=torch.bfloat16,
