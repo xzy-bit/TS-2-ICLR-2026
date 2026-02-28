@@ -35,8 +35,8 @@ for model in sorted(os.listdir(base_dir)):
 
 
 header_fmt = "{:<20}{:<20}" + "{:<8}"*10
-print(header_fmt.format("model","task","best@1","best@2","best@4","best@8","best@16","best@32",
-                        "maj@1","maj@2","maj@4","maj@8","maj@16"))
+print(header_fmt.format("model","task","best@2","best@4","best@8","best@16","best@32",
+                        "maj@2","maj@4","maj@8","maj@16","maj@32"))
 
 for task, rows in sorted(task_groups.items()):
     max_vals = []
