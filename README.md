@@ -10,8 +10,10 @@ We found a noval way to fine tune the SFT, which could preserving diversity duri
 ## Quickstart Guide
 
 ### 1. Environment Setup
+We provide an environment file including the python package versions we used in our experiments [env.txt](./asset/experiment_env.txt). For optimal reproducibility, we recommend using the same package versions. However, please note that results may still vary due to differences in hardware configurations and CUDA versions, etc.
+But you could still use the following scripts for a quick beginning.
 
-Create the environments for training(flash-attn) and testing(vllm):
+Create the environments for **training(flash-attn)** and **testing(vllm)**:
 
 ```bash
 bash train_env_setup.sh
