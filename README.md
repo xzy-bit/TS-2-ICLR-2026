@@ -82,7 +82,7 @@ bash openllm_eval.sh
 
 ---
 ## Released Models
-We release the following models that are built on top of the strong meta/llama3.1-8b model by training on the dataset HuggingFaceH4/ultrafeedback_binarized.
+We release the following models that are built on top of the strong meta/llama3.1-8b model by training on the dataset HuggingFaceH4/ultrafeedback_binarized.\
 
 [xzybit/llama3.1-8b-ts2](https://huggingface.co/xzybit/llama3.1-8b-ts2)
 
