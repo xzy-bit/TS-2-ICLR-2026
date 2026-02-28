@@ -7,7 +7,7 @@ We found a noval way to fine tune the SFT, which could preserving diversity duri
 ![](./asset/img/token_distribution.png)
 ---
 
-## Quickstart Guide
+## Quickstart
 
 ### 1. Environment Setup
 We provide an environment file including the python package versions we used in our experiments [env.txt](./asset/experiment_env.txt). For optimal reproducibility, we recommend using the same package versions. However, please note that results may still vary due to differences in hardware configurations and CUDA versions, etc.
@@ -81,6 +81,11 @@ bash openllm_eval.sh
 ```
 
 ---
+## Released Models
+We release the following models that are built on top of the strong meta/llama3.1-8b model by training on the dataset HuggingFaceH4/ultrafeedback_binarized.
+[xzybit/llama3.1-8b-ts2](https://huggingface.co/xzybit/llama3.1-8b-ts2)
+
+
 
 ## Citation
 
