@@ -87,17 +87,22 @@ We release the following models that are built on top of the strong meta/llama3.
 [xzybit/llama3.1-8b-ts2](https://huggingface.co/xzybit/llama3.1-8b-ts2)
 
 
-
 ## Citation
 
 This is the citation of original project:
 
 ```bibtex
-@inproceedings{li2025preserving,
-  title={Preserving Diversity in Supervised Fine-Tuning of Large Language Models},
-  author={Ziniu Li and Congliang Chen and Tian Xu and Zeyu Qin and Jiancong Xiao and Zhi-Quan Luo and Ruoyu Sun},
-  booktitle={The Thirteenth International Conference on Learning Representations},
-  year={2025},
-  url={https://openreview.net/forum?id=NQEe7B7bSw}
+@inproceedings{
+xuziyang2026ts,
+title={{TS}\${\textasciicircum}2\$: Training with Sparsemax+, Testing with Softmax for Accurate and Diverse {LLM} Fine-Tuning},
+author={XuZiyang and Ananthu Rajendran Pillai and Yinghua Yao and Yuangang Pan},
+booktitle={The Fourteenth International Conference on Learning Representations},
+year={2026},
+url={https://openreview.net/forum?id=CylRqa82Rk}
 }
 ```
+
+## Acknowledgement
+Our codebase references the code from [GEM](https://github.com/liziniu/GEM). We thank their authors for open-sourcing their code.
+
+
